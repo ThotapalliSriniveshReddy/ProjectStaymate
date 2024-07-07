@@ -1,0 +1,66 @@
+<% layout('layouts/boilerplate')%>
+
+        <div class="col-6 offset-3 my-3" >    
+            <form action="/campgrounds/<%=camp._id%>?_method=PUT" method = "POST"  novalidate class = "needs-validation" >
+                    <h1 class ="text-center">Edit Campground</h1>
+
+                    <div class = "mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" name = "campground[title]" id = "title"  value = "<%=camp.title%>" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>                            
+    
+                    </div>
+
+                    <div class = "mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-control" name = "campground[location]" id = "location" value = "<%=camp.location%>" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>                            
+    
+                    </div>
+                 
+
+                    <div class = "mb-3">
+                        <label for="image" class="form-label">Image Url</label>
+                        <input type="text" class="form-control" name = "campground[image]" id = "image" value = "<%=camp.image%>" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>                            
+    
+                    </div>      
+                   
+
+                    <div class = "mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <div class="input-group">
+                            <span class="input-group-text">₹</span>
+                            <input type="Number" class="form-control" name = "campground[price]" min = "0" value = "<%=camp.price%>" required>
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div>                                            
+                    </div>      
+              
+                    <div class = "mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea  class="form-control" name = "campground[description]" id = "description" required><%=camp.description%></textarea>
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div>   
+                    </div>                
+
+                      
+                    <div class="row">
+                        <div class="col d-flex">
+                            <button class = "btn btn-success flex-grow-1">Apply changes</button>
+                        </div>       
+                        <div class="col d-flex">
+                            <a href="/campgrounds/<%=camp._id%>" class = "btn btn-danger flex-grow-1" >Cancel</a>            
+                        </div>       
+                    </div>
+                          
+                </form>
+            </div>

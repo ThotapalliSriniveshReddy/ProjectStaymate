@@ -1,0 +1,55 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="col-6 offset-3 my-3 " >    
+    <form action="/campgrounds" method = "POST" novalidate  class = "needs-validation">
+            <h1 class ="text-center">New Campground</h1>
+            <div class = "mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" name = "campground[title]" id = "title" required>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>                
+            </div>
+            <div class = "mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" name = "campground[location]" id = "location" required>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>                
+            </div>
+            <div class = "mb-3">
+                <label for="image" class="form-label">Image Url</label>
+                <input type="text" class="form-control" name = "campground[image]" id = "image" required>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>                
+            </div>      
+            <div class = "mb-3">
+                <label for="price" class="form-label">Price</label>
+                <div class="input-group">
+                    <span class="input-group-text">₹</span>
+                    <input type="Number" class="form-control" name = "campground[price]" min = "0" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>                    
+                </div>
+            </div>
+                   
+            <div class = "mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea  class="form-control" name = "campground[description]" id = "description"  required ></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>                
+            </div>                
+            <div class="row">
+                <div class="col d-flex">
+                    <button class = "btn btn-info flex-grow-1">Add Campground</button>
+                </div>       
+                <div class="col d-flex">
+                    <a href="/campgrounds" class = "btn btn-danger flex-grow-1" >Cancel</a>            
+                </div>       
+            </div>
+        </form>
+    </div>
+
